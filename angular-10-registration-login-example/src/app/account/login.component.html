@@ -1,0 +1,60 @@
+﻿<div class="hold-transition login-page" style="background-color: rgb(61, 20, 20);margin-bottom: 2px;">
+  <div class="card" style="border-radius: 30px; margin: 7px 20px 7px 70px;">
+    <h4 class="card-header">Login</h4>
+    <div class="card-body" style="padding-bottom: 1px;">
+      <!-- <div    class="login-box"   >
+
+<div class="card-body"> -->
+      <img _ngcontent-xlp-c20="" src="assets/school-mangement-system.png" alt="AdminLTE Logo" style="opacity: .9;">
+
+
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="input-group mb-3">
+            <input type="email" placeholder="Email" formControlName="username" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            </div>
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required">Username is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-group mb-3">
+            <input type="password" placeholder="Password" formControlName="password" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+          </button>
+          <a routerLink="../register" class="btn btn-link">Register</a>
+        </div>
+        <div>
+          <p style="background-color: ivory;"> <img class="left-block img-responsive" src="/assets/cdf.png" width="30"
+              height="30" alt="" />
+            Copyright © : CDF Center</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
